@@ -59,8 +59,8 @@ Build
 Run
 ---
 
-* Copy the OutRun revision B romset to the roms subdirectory. Rename the files if necessary.
-* Copy or link the roms subdirectory to whereever your executable resides.
+* Copy the `OutRun revision B romset` to the `roms` subdirectory. Rename the files if necessary.
+* Copy or link the `roms` subdirectory to whereever your executable resides.
 
 ###
 
