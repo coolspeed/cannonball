@@ -16,7 +16,7 @@ Cannonball has been successfully built for Windows, Mac OS X, Linux, Open Pandor
 
 * Install your favourite C++ environment (e.g. GCC, Visual Studio, Xcode, MingGW etc.)
 * Install [CMake](http://www.cmake.org/). This generates your platform and compiler build files. 
-* Extract the [Boost Library](http://www.boost.org/) somewhere, for example: c:\coding\lib\boost_1_68_0
+* Extract the [Boost Library](http://www.boost.org/) somewhere, for example: `c:\coding\lib\boost_1_68_0`
 * Extract the [SDL Library](https://www.libsdl.org/download-2.0.php) somewhere, for example: `c:\coding\lib\SDL2`
 * Read the SDL documentation & compile the SDL Library for your system.
 * Extract the Cannonball code somewhere, for example: `C:\coding\cannonball`
