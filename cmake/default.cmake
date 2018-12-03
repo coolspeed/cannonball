@@ -36,7 +36,7 @@ link_directories(
 
 if (CANNONBOARD)
     # Search for additional boost libraries needed for CannonBoard support: Threading & System
-    set(BOOST_INCLUDEDIR ${lib_base}/boost_1_54_0)
+    set(BOOST_INCLUDEDIR ${lib_base}/boost_1_68_0)
     find_package(Boost COMPONENTS thread system REQUIRED)
     
     link_libraries(cannonball

@@ -16,17 +16,16 @@ Cannonball has been successfully built for Windows, Mac OS X, Linux, Open Pandor
 
 * Install your favourite C++ environment (e.g. GCC, Visual Studio, Xcode, MingGW etc.)
 * Install [CMake](http://www.cmake.org/). This generates your platform and compiler build files. 
-* Extract the [Boost Library](http://www.boost.org/) somewhere, for example: c:\coding\lib\boost_1_51_0
-* Extract the [SDL Library](http://www.libsdl.org/download-1.2.php) somewhere, for example: c:\coding\lib\SDL-1.2.15
+* Extract the [Boost Library](http://www.boost.org/) somewhere, for example: c:\coding\lib\boost_1_68_0
+* Extract the [SDL Library](https://www.libsdl.org/download-2.0.php) somewhere, for example: `c:\coding\lib\SDL2`
 * Read the SDL documentation & compile the SDL Library for your system.
-* Windows only, download and install the [Direct 8.1 SDK](http://stackoverflow.com/questions/5192384/looking-for-the-old-directx-8-1-sdk)
-* Extract the Cannonball code somewhere, for example: c:\coding\cannonball
-* You may need to create a .cmake file for your system to configure specific options. See the cmake subdirectory for more details. If not, the default.cmake file will be used.
+* Extract the Cannonball code somewhere, for example: `C:\coding\cannonball`
+* You may need to create a `.cmake` file for your system to configure specific options. See the `cmake` subdirectory for more details. If not, the `sdl2_vs.cmake` file will be used.
 
 Build
 -----
 
-* Run CMake to generate the relevant build files for your compiler. You can optionally pass -DTARGET=filename to pass a custom .cmake file
+* Run CMake to generate the relevant build files for your compiler. You can optionally pass `-DTARGET=filename` to pass a custom `.cmake` file
 * Compile using your chosen compiler. Further details below.
 
 ###
@@ -44,9 +43,9 @@ Build
     cmake -G "MinGW Makefiles" -DTARGET=mingw ../cmake
     mingw32-make
     
-### Visual Studio 2010
+### Visual Studio 2017
 
-    cmake -G "Visual Studio 10" ../cmake
+    cmake -G "Visual Studio 15" -DTARGET=sdl2_vs ../cmake
 
 ### Mac OSX
 
@@ -67,21 +66,3 @@ Run
 
     ln -s ../roms roms
     ./outrun
-    
-    
-Building SDL-1.2.15
--------------------
-
-### Darwin
-
-    ./configure --prefix=~/SDL-1.2.15/build --disable-assembly
-
-### MinGW
-
-See: [Setting up MSYS MinGW build system for compiling SDL OpenGL applications](http://blog.pantokrator.net/2006/08/08/setting-up-msysmingw-build-system-for-compiling-sdlopengl-applications/).
-
-Execute the below commands from the msys environment.
-    
-    ./configure --prefix=/mingw --enable-stdio-redirect=no
-    make
-    make install
