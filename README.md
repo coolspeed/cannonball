@@ -28,10 +28,18 @@ Build
 * Run CMake to generate the relevant build files for your compiler. You can optionally pass `-DTARGET=filename` to pass a custom `.cmake` file
 * Compile using your chosen compiler. Further details below.
 
-###
+### Make `build` subdirectory
 
     mkdir build
     cd build
+    
+### Visual Studio 2017
+
+    cmake -G "Visual Studio 15" -DTARGET=sdl2_vs ../cmake
+
+* Copy `SDL.DLL` and the `roms` subdirectory to the `build` directory.
+* Right click the `cannonball` project in the IDE and choose `Set as StartUp project`. 
+* You can then compile, debug and run from Visual Studio as expected.
 
 ### Non-IDE (e.g. straight GCC)
     
@@ -42,16 +50,8 @@ Build
 
     cmake -G "MinGW Makefiles" -DTARGET=mingw ../cmake
     mingw32-make
-    
-### Visual Studio 2017
 
-    cmake -G "Visual Studio 15" -DTARGET=sdl2_vs ../cmake
-
-* Copy `SDL.DLL` and the `roms` subdirectory to the `build` directory.
-* Right click the `cannonball` project in the IDE and choose `Set as StartUp project`. 
-* You can then compile, debug and run from Visual Studio as expected.
-
-### Mac OSX
+### Mac OS X
 
     cmake -G "Unix Makefiles" -DTARGET:STRING=macosx ../cmake
     make
