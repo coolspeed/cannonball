@@ -1,7 +1,7 @@
 # CMake setup used for SDL2 Builds.
 
 set(lib_base D:/lib)
-set(sdl_root ${lib_base}/SDL2)
+set(sdl_root ${lib_base}/SDL2-2.0.9)
 
 include_directories("${sdl_root}")
 
@@ -11,7 +11,7 @@ link_libraries(cannonball
 
 # Linking
 link_directories(
-    "${sdl_root}/lib"
+    "${sdl_root}/lib/x64"
 )
 
 add_definitions(-O3 -DSDL2)

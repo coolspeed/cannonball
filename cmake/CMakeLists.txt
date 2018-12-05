@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 2.6.2)
 project (cannonball)
 
-set(DCMAKE default.cmake)
+set(DCMAKE sdl2_vs.cmake)
 set(CMDIR ../cmake)
 
 # Uncomment for debug output
