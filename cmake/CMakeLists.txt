@@ -317,7 +317,10 @@ add_executable(cannonball-exe ${SRCS_EXECUTABLE})
 target_link_libraries(cannonball-exe cannonball)
 
 if(SDL2)
-	find_library(SDL2_LIBRARY SDL2)
+    find_library(SDL2_LIBRARY
+        NAME SDL2
+        HINTS ${sdl_root}/lib/x64
+    )
 	link_libraries(SDL2_LIBRARY)
 	target_link_libraries(cannonball ${SDL2_LIBRARY})
 endif()
@@ -341,4 +344,3 @@ configure_file(../res/tilemap.bin ./res/tilemap.bin
 configure_file(../res/tilepatch.bin ./res/tilepatch.bin
     COPYONLY 
 )
-
