@@ -32,7 +32,7 @@ Build
 
     mkdir build
     cd build
-    
+
 ### Visual Studio 2017
 
     cmake -G "Visual Studio 15" -DTARGET=sdl2_vs ../cmake
